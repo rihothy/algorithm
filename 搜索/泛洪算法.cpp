@@ -4,9 +4,10 @@ using namespace std;
 
 auto flood_fill = [&](const auto& graph, auto ele)
 {
+	auto r = graph.size(), c = r ? graph[0].size() : 0;
+
 	auto cnt = 0;
 	auto vis = vector(r, vector(c, false));
-	auto r = graph.size(), c = r ? graph[0].size() : 0;
 	const auto dir = vector<vector<int>>{ {0, 1}, {1, 0}, {0, -1}, {-1, 0} };
 
 	auto dfs = [&](auto&& self, auto i, auto j)->void
