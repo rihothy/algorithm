@@ -2,7 +2,7 @@
 
 using namespace std;
 
-auto flood_fill = [&](const auto& graph, auto ele)
+auto flood_fill = [](const auto& graph, auto ele)
 {
 	auto r = graph.size(), c = r ? graph[0].size() : 0;
 
