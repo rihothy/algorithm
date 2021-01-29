@@ -5,7 +5,7 @@ using namespace std;
 auto flood_fill = [&](const auto& graph, auto ele)
 {
 	auto cnt = 0;
-	bool vis[1000][1000];
+	auto vis = vector(r, vector(c, false));
 	auto r = graph.size(), c = graph[0].size();
 	const auto dir = vector<vector<int>>{ {0, 1}, {1, 0}, {0, -1}, {-1, 0} };
 
